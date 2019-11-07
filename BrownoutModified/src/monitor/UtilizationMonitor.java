@@ -11,7 +11,8 @@ import brownout.WorkerNodeCommandExecution;
 import log.LogRecorder;
 import model.Container;
 import model.WorkerNode;
-import policy.LowestUtilizationContainerFirstPolicy;
+import policy.FirstComponentPolicy;
+//import policy.LowestUtilizationContainerFirstPolicy;
 
 public class UtilizationMonitor extends AbstractMonitor{
 
@@ -54,8 +55,8 @@ public class UtilizationMonitor extends AbstractMonitor{
 		double dimmerValue = bc.getDimmerValue(workerNodeList);
 		
 		//Get the containers that should be deactivated
-//		ArrayList<Container> deactivatedContainerList = (new FirstComponentPolicy(dimmerValue, workerNodeList)).getDeactivatedContainerList();
-		ArrayList<Container> deactivatedContainerList = (new LowestUtilizationContainerFirstPolicy(dimmerValue, workerNodeList)).getDeactivatedContainerList();
+		ArrayList<Container> deactivatedContainerList = (new FirstComponentPolicy(dimmerValue, workerNodeList)).getDeactivatedContainerList();
+//		ArrayList<Container> deactivatedContainerList = (new LowestUtilizationContainerFirstPolicy(dimmerValue, workerNodeList)).getDeactivatedContainerList();
 
 		//Stop the containers in the list
 		containerCommandExecution.stopContatiners(deactivatedContainerList);

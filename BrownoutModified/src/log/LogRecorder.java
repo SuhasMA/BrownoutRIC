@@ -39,8 +39,9 @@ public class LogRecorder {
 		logger.info(info);
 	}
 	
-	public static void main(String[] args) {
-		LogRecorder lr = new LogRecorder();
-	}
+	/*
+	 * public static void main(String[] args) { LogRecorder lr = new LogRecorder();
+	 * }
+	 */
 
 }

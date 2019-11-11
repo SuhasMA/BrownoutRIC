@@ -33,7 +33,8 @@ public class ServiceCommandExecution extends CommandExecution{
 	 */
 	public void updateServices(String serviceId){
 		System.out.println("======Update Services====");
-		String command = "sh  updateService.sh " + serviceId;
+		//String command = "sh  updateService.sh " + serviceId;
+		String command = "updateService.sh";
 		executeCommandWithLessInfo(command);
 	}
 }

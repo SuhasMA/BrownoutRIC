@@ -9,7 +9,7 @@ public class BrownoutMain {
 	public static double OVERLOAD_THRESHOLD = 0.0;
 	public final static int TIME_INTERVAL = 60;
 	
-	//public static LogRecorder log = new LogRecorder();
+	public static LogRecorder log = new LogRecorder();
 	
 	public static void main(String args[]) {
 

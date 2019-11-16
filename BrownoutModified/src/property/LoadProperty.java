@@ -19,8 +19,9 @@ public class LoadProperty {
 		 prop = new Properties();
 		InputStream input = null;
 		
+		String configFIleName = System.getProperty("user.dir") +"\\property\\config.properties";
 		try {
-			input = new FileInputStream("src/property/config.properties");
+			input = new FileInputStream(configFIleName);
 			prop.load(input);
 		}catch(IOException ex) {
 			ex.printStackTrace();

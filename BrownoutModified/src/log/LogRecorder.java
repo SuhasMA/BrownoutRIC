@@ -18,8 +18,10 @@ public class LogRecorder {
 		logger = Logger.getLogger("BrownoutLog");
 		FileHandler fh;
 
+		String configFIleName = System.getProperty("user.dir") +"\\log\\brownout.log";
+		
 		try {
-			fh = new FileHandler("src/log/brownout.log");
+			fh = new FileHandler(configFIleName);
 			logger.addHandler(fh);
 			SimpleFormatter sf = new SimpleFormatter();
 			fh.setFormatter(sf);
